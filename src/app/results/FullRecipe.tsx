@@ -22,25 +22,23 @@ export default function FullRecipe({category,src,alt,time,title,description, lis
     }
 
     function getImageByCategory(category:string) {
-        var randomNumber=Math.floor(Math.random() * 6) + 1;
-
         switch (category) {
             case 'Breakfast':
-                return '/breakfast/breakfast_'+randomNumber+'.jpg';
+                return '/breakfast/breakfast_1.jpg';
             case 'Soups':
-                return '/soups/soup_'+randomNumber+'.jpg';
+                return '/soups/soup_2.jpg';
             case 'Dinner':
-                return '/dinner/dinner_'+randomNumber+'.jpg';
+                return '/dinner/dinner_2.jpg';
             case 'Desserts':
-                return '/desserts/dessert_'+randomNumber+'.jpg';
+                return '/desserts/dessert_3.jpg';
             case 'Salads': 
-                return '/salads/salad_'+randomNumber+'.jpg';
+                return '/salads/salad_3.jpg';
             case 'Quick and easy':
-                return '/quick/quick_'+randomNumber+'.jpg';           
+                return '/quick/quick_4.jpg';           
             case 'Vegetarian':
-                return '/vegetarian/vegetarian_'+randomNumber+'.jpg';
+                return '/vegetarian/vegetarian_5.jpg';
             case 'Lunch': 
-                return '/lunch/lunchbox_'+randomNumber+'.jpg';
+                return '/lunch/lunchbox_6.jpg';
             default:
                 return'';
         }
