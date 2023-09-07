@@ -15,7 +15,6 @@ export default function LatestRecipes() {
             <Recipe src={`${latestPath}4.jpg`} alt="cake"text="Raspberry jam and vanilia cream cake"/>
           </div>
         </div>
-
     </section>
   )
 }

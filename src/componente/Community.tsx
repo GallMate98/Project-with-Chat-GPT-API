@@ -13,8 +13,8 @@ export default function Community() {
             <CommunityCard src={`${latestPath}community_1.png`} alt="croissant" title="Find recipes" text="Explore the recipes selected by our stuff uploaded by our community"/>
             <CommunityCard src={`${latestPath}community_2.png`} alt="cooked" title="Review recipes" text="Evalute and comment on the dishes proposed by others"/>
             <CommunityCard src={`${latestPath}community_3.png`} alt="cake"title="Add recipes" text="Pass on your know-how by proposing your recipes"/>
+          </div>
         </div>
-     </div>
     </section>
   )
 }

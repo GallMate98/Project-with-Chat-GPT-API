@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Footer() {
+
+
   return (
-    <footer className='w-full bg-white h-30'>
+      <footer className='w-full bg-white h-30 z-10'>
         <section className='container mx-auto w-full'>
          <div className='flex  text-black items-center mr-16 justify-center w-full'>
             <Image className='w-32 mr-auto text' src="/logo.png" alt='imagine logo' width={300} height={300}/>
@@ -16,10 +18,10 @@ export default function Footer() {
                 <Link href="">Privacy policy</Link>
             </div>
          </div>
-         <div className='items-center text-black text-center'>
-            <p>Copyright &#169; 2023 you chef. All rights reserved!</p>
-         </div>
+          <div className='items-center text-black text-center'>
+              <p>Copyright &#169; 2023 you chef. All rights reserved!</p>
+          </div>
         </section>
-    </footer>
+      </footer>
   )
 }

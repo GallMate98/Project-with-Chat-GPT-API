@@ -1,10 +1,25 @@
-import Image from 'next/image'
-import Navbar from '../componente/Navbar'
+'use client'
+import Modal from '@/componente/Modal'
+import Header from '@/componente/Header'
+import LatestRecipes from '@/componente/LatestRecipes'
+import Community from '@/componente/Community'
+import Navbar from '@/componente/Navbar'
+import { IngredientsContextProvider } from '@/componente/IngredientsContext'
+
 
 export default function Home() {
+  
+ 
+
   return (
-<div>
-  <Navbar/>
-</div>
+    <IngredientsContextProvider>
+    <main >
+      <Header/>
+      <LatestRecipes/>
+      <Community/>
+      <Modal/>
+    </main>
+    </IngredientsContextProvider>
+
   )
 }

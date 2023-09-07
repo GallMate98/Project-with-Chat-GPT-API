@@ -1,4 +1,3 @@
-
 'use client';
 import React from 'react'
 import Image from 'next/image'
@@ -9,7 +8,7 @@ import {usePathname} from 'next/navigation'
 export default function Navbar() {
   const pathname = usePathname();
   return (
-    <nav className='bg-white w-full fixed z-10'>
+    <nav className='bg-white w-full fixed z-20'>
         <section className='container mx-auto flex items-center justify-between p-2'>
             <Image className='w-32' src="/logo.png" alt='imagine logo' width={300} height={300}/>
             <section className='flex justify-between gap-4 text-black'>
