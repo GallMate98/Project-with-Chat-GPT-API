@@ -52,13 +52,13 @@ export default function Modal() {
            <div className='flex flex-col items-center'>
             <h1 className='text-4xl w-full text-center pb-8 text-black'>Select your category</h1>
             <form className='flex flex-wrap gap-4 justify-center'> 
-                <ModalElements src={`${imagesPath}breakfast.jpg`} func={handleClick} text="Breakfast" val="breakfast" selectedVal={selectedVal} />
-                <ModalElements src={`${imagesPath}soups.jpg`} text="Soups" func={handleClick} selectedVal={selectedVal} val="soups"  />
-                <ModalElements src={`${imagesPath}dinner.jpg`} text="Dinner"func={handleClick} selectedVal={selectedVal} val="dinner"  />
-                <ModalElements src={`${imagesPath}desserts.jpg`} text="Desserts" func={handleClick} selectedVal={selectedVal} val="desserts"  />
-                <ModalElements src={`${imagesPath}salads.jpg`} text="Salads"func={handleClick} selectedVal={selectedVal} val="salads" />
-                <ModalElements src={`${imagesPath}quick.jpg`} text="Quick and Esay" func={handleClick} selectedVal={selectedVal} val="quick_and_easy"/>
-                <ModalElements src={`${imagesPath}vegetarian.jpg`} text="Vegetarian" func={handleClick} selectedVal={selectedVal}val="vegetarian"/>
+                <ModalElements src={`${imagesPath}breakfast.jpg`} func={handleClick} text="Breakfast" val="Breakfast" selectedVal={selectedVal} />
+                <ModalElements src={`${imagesPath}soups.jpg`} text="Soups" func={handleClick} selectedVal={selectedVal} val="Soups"  />
+                <ModalElements src={`${imagesPath}dinner.jpg`} text="Dinner"func={handleClick} selectedVal={selectedVal} val="Dinner"  />
+                <ModalElements src={`${imagesPath}desserts.jpg`} text="Desserts" func={handleClick} selectedVal={selectedVal} val="Desserts"  />
+                <ModalElements src={`${imagesPath}salads.jpg`} text="Salads"func={handleClick} selectedVal={selectedVal} val="Salads" />
+                <ModalElements src={`${imagesPath}quick.jpg`} text="Quick and Esay" func={handleClick} selectedVal={selectedVal} val="Quick and easy"/>
+                <ModalElements src={`${imagesPath}vegetarian.jpg`} text="Vegetarian" func={handleClick} selectedVal={selectedVal}val="Vegetarian"/>
                 <ModalElements src={`${imagesPath}lunchbox.jpg`} text="Lunch" func={handleClick} selectedVal={selectedVal} val="Lunch" />
              </form>
              <Link href={{

@@ -74,7 +74,7 @@ export default function page() {
      let arr = JSON.parse(data);
      for(let i=0;i<arr.length;i++)
      {
-      content.push(<FullRecipe key={i} title={arr[i].name} time={arr[i].preparationTime} list={arr[i].ingredients} description={arr[i].preparationDetails}/>)
+      content.push(<FullRecipe category={category} key={i} title={arr[i].name} time={arr[i].preparationTime} list={arr[i].ingredients} description={arr[i].preparationDetails}/>)
      }
 
      setFinalContent(content);

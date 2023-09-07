@@ -3,35 +3,57 @@ import React from 'react'
 import Image from 'next/image'
 import  {useState}  from 'react';
 
-export default function FullRecipe({src,alt,time,title,description, list}:any) {
-
-
-
+export default function FullRecipe({category,src,alt,time,title,description, list}:any) {
     const [isVisible, setIsVisible] = useState(false); 
     const [buttonText, setButtonText] = useState('Preparation');
-   function handleVisible() {
-    if(!isVisible) {
-        setIsVisible(true);
-        setButtonText("Close");
-       
-    }
-    else{ 
-        setIsVisible(false)
-        
-        setButtonText("Preparation");
 
+    function handleVisible() {
+        if(!isVisible) {
+            setIsVisible(true);
+            setButtonText("Close");
+        
+        }
+        else{ 
+            setIsVisible(false)
+            
+            setButtonText("Preparation");
+
+        }
     }
-   }
+
+    function getImageByCategory(category:string) {
+        var randomNumber=Math.floor(Math.random() * 6) + 1;
+
+        switch (category) {
+            case 'Breakfast':
+                return '/breakfast/breakfast_'+randomNumber+'.jpg';
+            case 'Soups':
+                return '/soups/soup_'+randomNumber+'.jpg';
+            case 'Dinner':
+                return '/dinner/dinner_'+randomNumber+'.jpg';
+            case 'Desserts':
+                return '/desserts/dessert_'+randomNumber+'.jpg';
+            case 'Salads': 
+                return '/salads/salad_'+randomNumber+'.jpg';
+            case 'Quick and easy':
+                return '/quick/quick_'+randomNumber+'.jpg';           
+            case 'Vegetarian':
+                return '/vegetarian/vegetarian_'+randomNumber+'.jpg';
+            case 'Lunch': 
+                return '/lunch/lunchbox_'+randomNumber+'.jpg';
+            default:
+                return'';
+        }
+    }
 
   return (
-
     <div className={`relative container border-2 max-w-[1100px] bg-white py-4 px-8 my-4 mb-8 ${isVisible?'bg-border-2 border-amber-600':''}`}>
         <div className='flex flex-row'>
             <div className='transform translate-x-[-80px]  translate-y-2'>
-                <Image className='mr-5 my-4 rounded' src={src} alt={alt} width={200} height={150}/>
+                <Image className='mr-5 my-4 rounded' src={getImageByCategory(category)} alt={alt} width={200} height={150}/>
             </div>
             <div className='mt-0 mb-2 mr-16 py-6'>
-                <h2 className='text-2xl mb-6 font-bold text-black '>{title}</h2>
+                <h2 className='text-2xl mb-6 font-bold text-black '>{title}{category}</h2>
                     <p className='font-medium text-black mt-1 mb-2'>Preparation time: {time}</p>
                 <div className='flex flex-row  justify-between font-medium text-black'>
                     <p className='text-black cursor-pointer mr-6'>Ingredients:</p>
