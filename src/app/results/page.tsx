@@ -33,8 +33,8 @@ export default function page() {
           setIsLoading(true);
 
           try{
-              //const response = await fetch(`/api/openai?ingredients=${ingredients}?selectedCategory=${category}`, {
-                const response = await fetch(`/api/mate`, {
+              const response = await fetch(`/api/openai?ingredients=${ingredients}?selectedCategory=${category}`, {
+               // const response = await fetch(`/api/mate`, {
                   method: 'POST',
                   headers: {
                       'Content-Type': 'application/json',
@@ -71,10 +71,10 @@ export default function page() {
     console.log(data);
     if(data && data !== undefined)
     {
-     let arr = JSON.parse(data);
-     for(let i=0;i<arr.length;i++)
+     let array = JSON.parse(data);
+     for(let i=0;i<array.length;i++)
      {
-      content.push(<FullRecipe category={category} key={i} title={arr[i].name} time={arr[i].preparationTime} list={arr[i].ingredients} description={arr[i].preparationDetails}/>)
+      content.push(<FullRecipe category={category} key={i} title={array[i].name} time={array[i].preparationTime} list={array[i].ingredients} description={array[i].preparationDetails}/>)
      }
 
      setFinalContent(content);
@@ -84,8 +84,8 @@ export default function page() {
 
   const imagesPath = '/breakfast/';
   return (
-    <section className='w-screen h-full   bg-cover bg-slate-200 pb-5 pt-5 z-10 flex flex-col'>
-        <h1 className='text-4xl  mt-20 pb-4 text-black font-semibold justify-start ml-40 mb-2'>Founded recipes in the {category} category</h1>
+    <section className='w-screen h-full   bg-cover bg-slate-200 pb-5 pt-5 z-10 flex flex-col items-center'>
+        <h1 className='text-4xl  mt-20 pb-4 text-black font-semibold justify-start ml-5 mb-2'>Founded recipes in the {category} category</h1>
         {isLoading &&  <img className='items-center' src={"https://media.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif"} alt="loading gift" width={300} height={300}/>}
         {!isLoading &&  <div className='flex flex-col gap-2 items-center justify-center w-screen mt-0'>
            {finalContent}

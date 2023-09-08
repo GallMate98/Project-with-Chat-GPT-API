@@ -51,7 +51,7 @@ export default function FullRecipe({category,src,alt,time,title,description, lis
                 <Image className='mr-5 my-4 rounded' src={getImageByCategory(category)} alt={alt} width={200} height={150}/>
             </div>
             <div className='mt-0 mb-2 mr-16 py-6'>
-                <h2 className='text-2xl mb-6 font-bold text-black '>{title}{category}</h2>
+                <h2 className='text-2xl mb-6 font-bold text-black '>{title}</h2>
                     <p className='font-medium text-black mt-1 mb-2'>Preparation time: {time}</p>
                 <div className='flex flex-row  justify-between font-medium text-black'>
                     <p className='text-black cursor-pointer mr-6'>Ingredients:</p>
